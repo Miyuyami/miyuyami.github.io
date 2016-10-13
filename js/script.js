@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("a.link_setup").attr("href", "https://raw.githubusercontent.com/Miyuyami/SWPatcher/master/SWPatcher/publish/setup.exe");
-	$("a.link_vt_setup").attr("href", "https://www.virustotal.com/en/file/b8d746df3db48871c296cdb91e342f50e615ec22dcec8fe0d537efb92dfabdd1/analysis/1474016329/");
+	$("a.link_vt_setup").attr("href", "https://www.virustotal.com/en/file/641be585614816ebf041d2655c1aa47348c74bc53f848ae43a020b751e1e563e/analysis/1476378576/");
 	$("a.link_vt_exe").attr("href", "https://www.virustotal.com/en/file/d06aa6128e2ebd4fd91abd006a7107babfb63b43457ba6dc1a4ff664c8b1e597/analysis/1475343423/");
 	$("iframe.link_yt_tutorial").attr("src", "https://www.youtube.com/embed/wogDNmHRzbw?rel=0");
 	var cookieValue = Cookies.get("language");
