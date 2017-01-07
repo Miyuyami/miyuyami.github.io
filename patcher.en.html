@@ -47,12 +47,18 @@
 						<p>Make sure you have the requirements to install <a target="_blank" href="https://www.microsoft.com/en-us/download/details.aspx?id=53344">Microsoft .NET Framework 4.6.2</a></p>
 					</li>
 					<li>
-						<h4>"Access denied" error</h4>
-						<p>Follow <a target="_blank" href="http://www.wikihow.com/Change-File-Permissions-on-Windows-7">this guide</a> to give your User read and write permissions to the soulworker folder.</p>
-					</li>
-					<li>
 						<h4>"Application cannot be started. Contact the application vendor." error on startup</h4>
-						<p>Uninstall the Patcher (<b>not Soulworker!</b>) and install it again with the installer provided in the link above</p>
+						<ul>
+							<li>uninstall the Closers Patcher from Control Panel/Programs and Features</li>
+							<li>go to "%localappdata%\Apps\2.0" then 2 more folders with random letters</li>
+							<li>you should see a lot of folders with long names, delete the ones starting with clos..</li>
+							<li>now go in "manifests" folder and do the same as above</li>
+							<li>then go back to "2.0" folder and do the same for "Data" folder</li>
+							<li>after all that, press "Windows Key + R" (Run box) and type (without quotes)</li>
+							<li>"rundll32 %SystemRoot%\system32\dfshim.dll CleanOnlineAppCache"</li>
+							<li>press enter</li>
+							<li>try to install Closers Patcher again</li>
+						</ul>
 					</li>
 					<li>
 						<h4>At server selection screen, the server name looks like some gibberish...</h4>
@@ -74,6 +80,6 @@
 				<p>In case you have a problem with the patcher you can contact me on discord: <b>Miyu#9404</b></p>
 			</div>
 		</div>
-		<script src="js/links.js"></script>
+		<script src="js/sw_links.js"></script>
 	</body>
 </html>

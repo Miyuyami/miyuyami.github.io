@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Miyu's Stuff</title>
+		<title>Soulworker Patcher</title>
 		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet">
 		<script>
@@ -26,6 +26,7 @@
 					<ul class="nav navbar-nav">
 						<li><a href="index.html">Home</a></li>
 						<li class="active"><a href="patcher.html">Soulworker Patcher</a></li>
+						<li><a href="closers_patcher.html">Closers Patcher</a></li>
 					</ul>
 				</div>
 				<ul class="nav navbar-nav navbar-right">
@@ -47,7 +48,13 @@
 				</div>
 				<div class="panel-body">
 					<div class="well">
-						<p>Version 2.5.0.2 <img src="images/new.gif"></p>
+						<p>Version 2.5.0.3 <img src="images/new.gif"></p>
+						<ul>
+							<li><b>Fixed</b> not showing a non-user-friendly error on startup when the game folder doesn't exist</li>
+						</ul>
+					</div>
+					<div class="well">
+						<p>Version 2.5.0.2</p>
 						<ul>
 							<li><b>Fixed</b> crash on startup if the default patcher path doesn't exist</li>
 						</ul>
@@ -304,7 +311,7 @@
 			
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-			<script src="js/script.js"></script>
+			<script src="js/sw_script.js"></script>
 			<script src="js/js.cookie.js"></script>
 		</div>
 	</body>
