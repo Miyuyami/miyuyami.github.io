@@ -17,18 +17,110 @@
 		<div class="well" lang="en">
 			<div class="well">
 				<h3>Description</h3>
-				<p>Soulworker Patcher was made to easily download and patch latest translations into your Soulworker Client.</p>
-				<p>The translations are downloaded from SWHQ Translation team and the original files are backed up.</p>
+				<p>Soulworker Patcher was made to easily download and patch latest translations into your Soulworker Client using the files from your client. This makes it compatible with almost any version, even if the translation is outdated. It is still recommended to always get the latest translations.</p>
+				<p>The translations are downloaded from SWHQ Translation team and the original files are backed up, they will be restored after the client closes.</p>
+				<p>Soulworker Patcher requires the game to be installed before using it. Both Japanese version and Korean versions are supported. If you have both installed, you can change the "Game Location" if you want to access the other region.</p>
 			</div>
 			
 			<div class="well">
 				<h3>Functions</h3>
 				<ul>
 					<li>Backs up the original files and replaces them with the downloaded translations.</li>
-					<li>Auto-updates the Soulworker client when it's outdated.</li>
-					<li>Unicode codepage fix to support other unicode languages (example: Thai, Korean...)</li>
-					<li>Direct login for faster startup.</li>
+					<li>Auto-updates the Soulworker client when it's outdated. (JP region only)</li>
+					<li>Unicode codepage fix to support unicode languages excluding the server region's language</li>
+					<li>Direct login for faster startup. (JP region only, for KR region it only opens Stove)</li>
 				</ul>
+			</div>
+			
+			<div class="well">
+				<h3>How to use</h3>
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href="#jp_server">Japanese Server</a></li>
+					<li><a data-toggle="tab" href="#kr_server">Korean Server</a></li>
+				</ul>
+				<div class="tab-content">
+					<div id="jp_server" class="tab-pane fade in active">
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#jp_server_default">Manual Start</a></li>
+							<li><a data-toggle="tab" href="#jp_server_login">Auto Start</a></li>
+						</ul>
+						<div class="tab-content">
+							<div id="jp_server_default" class="tab-pane well fade in active">
+								<ol type="1">
+									<li>press "Ready to Play", if no pop-up message shows up, skip to 2</li>
+									<ol type="I">
+										<li>if the message says "Outdated translation files, force patching will now commence."</li>
+										<li>press OK and wait for it to finish patching</li>
+										<li>press "Ready to Play" again</li>
+									</ol>
+									<li>go to <a href="http://soulworker.jp">Soulworker Japan</a> (you might need VPN)</li>
+									<li>login on the hangame website</li>
+									<li>press "GAME START" button</li>
+									<li>when hangame's launcher shows up, press "GAME START" button on launcher</li>
+									<li>enjoy!!</li>
+								</ol>
+							</div>
+							<div id="jp_server_login" class="tab-pane well fade">
+								<ol type="1">
+									<li>click "Settings" menu</li>
+									<li>click "Credentials" tab</li>
+									<li>check "Login using the Patcher"</li>
+									<li>write your hangame ID and password in the respective fields</li>
+									<li>press "OK"</li>
+									<li>press "Ready to Play", if no pop-up message shows up, skip to 7</li>
+									<ol type="I">
+										<li>if the message says "Outdated translation files, force patching will now commence."</li>
+										<li>press "OK" and wait for it to finish patching</li>
+										<li>press "Ready to Play" again</li>
+									</ol>
+									<li>if "Validation failed." message shows up, connect your VPN and press "Retry"</li>
+									<li>enjoy!!</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+					<div id="kr_server" class="tab-pane fade">
+						<ul class="nav nav-tabs">
+							<li class="active"><a data-toggle="tab" href="#kr_server_default">Manual Start</a></li>
+							<li><a data-toggle="tab" href="#kr_server_login">Auto Start</a></li>
+						</ul>
+						<div class="tab-content">
+							<div id="kr_server_default" class="tab-pane well fade in active">
+								<ol type="1">
+									<li>press "Ready to Play", if no pop-up message shows up, skip to 2</li>
+									<ol type="I">
+										<li>if the message says "Outdated translation files, force patching will now commence."</li>
+										<li>press OK and wait for it to finish patching</li>
+										<li>press "Ready to Play" again</li>
+									</ol>
+									<li>if you open stove directly, skip to 6</li>
+									<li>go to <a href="http://soulworker.co.kr">Soulworker Korea</a></li>
+									<li>login on the onstove website</li>
+									<li>press "GAME START" button</li>
+									<li>when Stove shows up, press the button under "Soulworker"</li>
+									<li>enjoy!!</li>
+								</ol>
+							</div>
+							<div id="kr_server_login" class="tab-pane well fade">
+								<ol type="1">
+									<li>click "Settings" menu</li>
+									<li>click "Credentials" tab</li>
+									<li>check "Login using the Patcher"</li>
+									<li>write your onstove Email and password in the respective fields</li>
+									<li>press "OK"</li>
+									<li>press "Ready to Play", if no pop-up message shows up, skip to 7</li>
+									<ol type="I">
+										<li>if the message says "Outdated translation files, force patching will now commence."</li>
+										<li>press "OK" and wait for it to finish patching</li>
+										<li>press "Ready to Play" again</li>
+									</ol>
+									<li>when Stove shows up, press the button under "Soulworker"</li>
+									<li>enjoy!!</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			
 			<div class="well">
