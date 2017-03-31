@@ -154,8 +154,25 @@
 					</li>
 					<li>
 						<h4>At server selection screen, the server name looks like some gibberish...</h4>
-						<img src="https://i.imgur.com/x7Ij1Ql.png" class="img-responsive" alt="Example Server Name">
+						<img src="https://i.imgur.com/x7Ij1Ql.png" class="img-responsive" alt="Gibberish Server Name">
 						<p>It's a side effect of the unicode codepage fix. It will not affect anything else.</p>
+					</li>
+					<li>
+						<h4>I get this error when starting the patcher</h4>
+						<img src="https://i.imgur.com/SVS1Dgw.png" class="img-responsive" alt="Right Permissions Error">
+						<ul>
+							<li>for some reason Soulworker Patcher couldn't gain access to the game folder</li>
+							<li>you should add the permissions manually, like this</li>
+							<li>go to your "soulworker" folder Properties on Security tab</li>
+							<img src="https://i.imgur.com/camuTge.png" class="img-responsive" alt="Properties->Security">
+							<li>then go to Edit, then Add</li>
+							<li>write the name of your windows user, press Check Names, then press OK</li>
+							<li>select the group that was created and check the boxes like this<br>
+								note: instead of "Miyu" it should be the name of your windows user</li>
+							<img src="https://i.imgur.com/y7wkQC6.png" class="img-responsive" alt="Modify, Read&Execute, List, Read, Write">
+							<li>save the changes</li>
+							<li>run Soulworker Patcher again and it should work</li>
+						</ul>
 					</li>
 				</ul>
 			</div>
