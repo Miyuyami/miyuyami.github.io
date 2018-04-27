@@ -3,7 +3,7 @@ $(document).ready(function() {
 		var fields = Object.keys(data);
 		for (var i in fields) {
 			var date = new Date(data[fields[i]]);
-			$("span." + fields[i]).text(moment(data[fields[i]]).fromNow());
+			$("span." + fields[i]).text(moment(data[fields[i]], "DD/MM/YYYY h:mm A UTC+Z").fromNow());
 		}
 	});
 });
