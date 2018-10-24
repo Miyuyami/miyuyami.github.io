@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>MapleStory 2 Patches</title>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-84530363-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+
+	<body>
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="index.html">Miyu's Stuff</a>
+				</div>
+				<div>
+					<ul class="nav navbar-nav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="patcher.html">Soulworker Patcher</a></li>
+						<li><a href="ms2_patches.html">MapleStory 2 Patches</a></li>
+						<li class="active"><a href="ms2_ox.html">MapleStory 2 OX</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+		
+		<div class="container">
+			<form class="well" onsubmit="return false;">
+				<div class="input-group">
+					<input id="ox_search" type="text" class="form-control" placeholder="loading questions..." onkeyup="search()" disabled>
+					<span class="input-group-btn">
+						<button id="ox_search_button" class="btn btn-primary" type="button" onclick="search()" disabled>Search</button>
+					</span>
+				</div>
+				
+				<script type="text/javascript">
+					function search() {
+						var values = $("#ox_search").val().toLowerCase().split(" ").filter((v) => v !== "");
+						
+						$("#ox_table li").each((idx, li) => {
+							var li_text = li.innerText.toLowerCase();
+							
+							if (values.every((v) => ~li_text.indexOf(v))) {
+								$(li).css("display", "");
+							} else {
+								$(li).css("display", "none");
+							}
+						});
+					}
+				</script>
+			</form>
+			<div id="ox_table"></div>
+		
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script type="text/javascript">
+				var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1ZNo8-DPNOycviPd-h8n-SabhqWjJoM8a8MxLlwQ-6lY/edit?usp=sharing";
+				function init() {
+				Tabletop.init({ key: publicSpreadsheetUrl,
+								callback: showInfo,
+								wanted: [ "OX" ] });
+				}
+				
+				function showInfo(data, tabletop) {
+					$.each(tabletop.sheets("OX").all(), function(i, ox) {
+						var result = ox.Result;
+						var ox_li;
+						
+						if (result === "O") {
+							ox_li = $("<li class=\"list-group-item list-group-item-success\">");
+						} else {
+							ox_li = $("<li class=\"list-group-item list-group-item-danger\">");
+						}
+						
+						ox_li.append(ox.Question + "</div>");
+						
+						ox_li.appendTo("#ox_table");
+					});
+					
+					$("#ox_search").attr("placeholder", "Type any question here...");
+					$("#ox_search").prop("disabled", false);
+					$("#ox_search_button").prop("disabled", false);
+				}
+				
+				window.addEventListener('DOMContentLoaded', init)
+			</script>
+		</div>
+	</body>
+</html>
