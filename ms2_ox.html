@@ -44,7 +44,7 @@
 				
 				<script type="text/javascript">
 					function search() {
-						var values = $("#ox_search").val().toLowerCase().split(" ").filter((v) => v !== "");
+						const values = $("#ox_search").val().toLowerCase().split(" ").filter((v) => v !== "");
 						
 						$("#ox_table li").each((idx, li) => {
 							var li_text = li.innerText.toLowerCase();
@@ -61,30 +61,49 @@
 			<div id="ox_table"></div>
 		
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+			<script src="js/utils.js"></script>
 			<script type="text/javascript">
-				var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1ZNo8-DPNOycviPd-h8n-SabhqWjJoM8a8MxLlwQ-6lY/edit?usp=sharing";
+				const publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1ZNo8-DPNOycviPd-h8n-SabhqWjJoM8a8MxLlwQ-6lY/edit?usp=sharing";
 				function init() {
 				Tabletop.init({ key: publicSpreadsheetUrl,
 								callback: showInfo,
 								wanted: [ "OX" ] });
 				}
 				
+				function addQuestion(question, result) {
+					var ox_li;
+					
+					if (result) {
+						ox_li = $("<li class=\"list-group-item list-group-item-success\">");
+					} else {
+						ox_li = $("<li class=\"list-group-item list-group-item-danger\">");
+					}
+					
+					ox_li.append(question + "</div>");
+					
+					ox_li.appendTo("#ox_table");
+				}
+				
 				function showInfo(data, tabletop) {
-					$.each(tabletop.sheets("OX").all(), function(i, ox) {
-						var result = ox.Result;
-						var ox_li;
-						
-						if (result === "O") {
-							ox_li = $("<li class=\"list-group-item list-group-item-success\">");
-						} else {
-							ox_li = $("<li class=\"list-group-item list-group-item-danger\">");
-						}
-						
-						ox_li.append(ox.Question + "</div>");
-						
-						ox_li.appendTo("#ox_table");
+					var flags = {};
+					
+					const questions = tabletop.sheets("OX").all()
+						.reduce((a, ox) => a.concat({ Category: ox.Category, Question: ox.Question, Result: ox.Result }, { Category: ox.Category, Question: ox.Answer, Result: "O" }), [])
+						.filter((e) => {
+							if (flags[e.Question]) {
+								return false;
+							}
+							
+							flags[e.Question] = true;
+							
+							return true;
+						})
+						.sort(sort_by("Category", "Question", "Answer", "Result"));
+					
+					$.each(questions, function(i, ox) {
+						addQuestion(ox.Question, ox.Result === "O");
 					});
 					
 					$("#ox_search").attr("placeholder", "Type any question here...");
