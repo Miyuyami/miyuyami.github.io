@@ -14,6 +14,11 @@ function search() {
 	});
 }
 
+function handleSearchClick() {
+	search();
+	focusSearchBar();
+}
+
 function setEnabled(isEnabled) {
 	var placeholderSearchText;
 	if (isEnabled) {
@@ -30,6 +35,10 @@ function setEnabled(isEnabled) {
 
 function clearSearchBar() {
 	$("#ox_search").val("");
+}
+
+function focusSearchBar() {
+	$("#ox_search").focus();
 }
 
 const publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1ZNo8-DPNOycviPd-h8n-SabhqWjJoM8a8MxLlwQ-6lY/edit?usp=sharing";
@@ -84,6 +93,7 @@ function showInfo(data, tabletop) {
 	});
 	
 	setEnabled(true);
+	focusSearchBar();
 }
 
 window.addEventListener('DOMContentLoaded', init)
