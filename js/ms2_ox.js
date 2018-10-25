@@ -13,12 +13,40 @@ function search() {
 		}
 	});
 }
-					
+
+function setEnabled(isEnabled) {
+	var placeholderSearchText;
+	if (isEnabled) {
+		placeholderSearchText = "Type at least a word with at least 3 letters...";
+	} else {
+		placeholderSearchText = "loading questions...";
+	}
+	
+	$("#ox_search").attr("placeholder", placeholderSearchText);
+	$("#ox_search").prop("disabled", !isEnabled);
+	$("#ox_search_button").prop("disabled", !isEnabled);
+	$("#ox_refresh_button").prop("disabled", !isEnabled);
+}
+
+function clearSearchBar() {
+	$("#ox_search").val("");
+}
+
 const publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1ZNo8-DPNOycviPd-h8n-SabhqWjJoM8a8MxLlwQ-6lY/edit?usp=sharing";
 function init() {
+	setEnabled(false);
+	
 	Tabletop.init({ key: publicSpreadsheetUrl,
 					callback: showInfo,
 					wanted: [ "OX" ] });
+}
+
+function reloadData() {
+	setEnabled(false);
+	clearSearchBar();
+	
+	$("#ox_table li").remove();
+	init();
 }
 
 function addQuestion(question, result) {
@@ -55,9 +83,7 @@ function showInfo(data, tabletop) {
 		addQuestion(ox.Question, ox.Result === "O");
 	});
 	
-	$("#ox_search").attr("placeholder", "Type at least a word with at least 3 letters...");
-	$("#ox_search").prop("disabled", false);
-	$("#ox_search_button").prop("disabled", false);
+	setEnabled(true);
 }
 
 window.addEventListener('DOMContentLoaded', init)
