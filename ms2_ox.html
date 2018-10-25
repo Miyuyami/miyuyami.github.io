@@ -44,12 +44,14 @@
 				
 				<script type="text/javascript">
 					function search() {
-						const values = $("#ox_search").val().toLowerCase().split(" ").filter((v) => v !== "");
+						const search_text = $("#ox_search").val().toLowerCase();
+						const values = search_text.split(" ").filter((v) => v !== "");
 						
 						$("#ox_table li").each((idx, li) => {
 							var li_text = li.innerText.toLowerCase();
 							
-							if (values.every((v) => ~li_text.indexOf(v))) {
+							if (values.some(w => w.length >= 3) &&
+								values.every((v) => ~li_text.indexOf(v))) {
 								$(li).css("display", "");
 							} else {
 								$(li).css("display", "none");
@@ -76,9 +78,9 @@
 					var ox_li;
 					
 					if (result) {
-						ox_li = $("<li class=\"list-group-item list-group-item-success\">");
+						ox_li = $("<li class=\"list-group-item list-group-item-success\" style=\"display: none;\">");
 					} else {
-						ox_li = $("<li class=\"list-group-item list-group-item-danger\">");
+						ox_li = $("<li class=\"list-group-item list-group-item-danger\" style=\"display: none;\">");
 					}
 					
 					ox_li.append(question + "</div>");
@@ -106,7 +108,7 @@
 						addQuestion(ox.Question, ox.Result === "O");
 					});
 					
-					$("#ox_search").attr("placeholder", "Type any question here...");
+					$("#ox_search").attr("placeholder", "Type at least a word with at least 3 letters...");
 					$("#ox_search").prop("disabled", false);
 					$("#ox_search_button").prop("disabled", false);
 				}
