@@ -5,13 +5,18 @@ function search() {
 	$("#ox_table li").each((idx, li) => {
 		var li_text = li.innerText.toLowerCase();
 		
-		if (values.some(w => w.length >= 3) &&
+		if ((values.some(w => w.length >= 3) ||
+			 values.filter(w => containsNumber(w)).length >= 2) &&
 			values.every((v) => ~li_text.indexOf(v))) {
 			$(li).css("display", "");
 		} else {
 			$(li).css("display", "none");
 		}
 	});
+}
+
+function containsNumber(str) {
+	return /\d/.test(str);
 }
 
 function handleSearchClick() {
