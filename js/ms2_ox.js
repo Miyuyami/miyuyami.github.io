@@ -49,6 +49,7 @@ function focusSearchBar() {
 const publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1ZNo8-DPNOycviPd-h8n-SabhqWjJoM8a8MxLlwQ-6lY/edit?usp=sharing";
 function init() {
 	setEnabled(false);
+	clearSearchBar();
 	
 	Tabletop.init({ key: publicSpreadsheetUrl,
 					callback: showInfo,
@@ -57,7 +58,6 @@ function init() {
 
 function reloadData() {
 	setEnabled(false);
-	clearSearchBar();
 	
 	$("#ox_table li").remove();
 	init();
