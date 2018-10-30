@@ -12,4 +12,6 @@ $(document).ready(function() {
 	$("a.link_gb").attr("href", "https://www.dropbox.com/s/scepv8sk3dd27er/Xml.zip?dl=1");
 	$("a.link_gb_noname").attr("href", "https://www.dropbox.com/s/o9j7eexnjk8bawv/Xml%20%28No%20Names%20ver%29.zip?dl=1");
 	$("a.link_gb_fontsonly").attr("href", "https://www.dropbox.com/s/ykj7xqsv907didw/Xml%20%28Fonts%20only%29.zip?dl=1");
+	
+	$("a.link_sound_kr").attr("href", "https://mega.nz/#!q14DRS7J!IeHl4c4bpEjwtXVuNUawOMmnzQLakQXYa_JB6H2NguA");
 });
