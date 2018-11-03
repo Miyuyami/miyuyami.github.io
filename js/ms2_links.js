@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
 	$("a.link_dropbox_cn_en").attr("href", "https://dl.dropboxusercontent.com/s/d9ojnxja5sra867/Xml%20English.zip");
 	$("a.link_dropbox_cn_ko").attr("href", "https://dl.dropboxusercontent.com/s/g7nax01y4yjlonf/Xml%20Korean.zip");
 	$("a.link_dropbox_cn_en_noname").attr("href", "https://dl.dropboxusercontent.com/s/ws7wgg7lgnmj4vr/Xml%20English%20%28No%20Names%20ver%29.zip");

@@ -14,98 +14,18 @@
 			ga('create', 'UA-84530363-1', 'auto');
 			ga('send', 'pageview');
 		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/js.cookie.js"></script>
+		<script src="js/nav_controller.js"></script>
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="index.html">Miyu's Stuff</a>
-				</div>
-				<div>
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="patcher.html">Soulworker Patcher</a></li>
-						<li class="active"><a href="ms2_patches.html">MapleStory 2 Patches</a></li>
-						<li><a href="ms2_ox.html">MapleStory 2 OX</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<div id="nav_content"></div>
 		
 		<div class="container">
-			<div class="well">
-				<h3>Chinese MapleStory 2 Patches</h3>
-				<p>English: <a class="link_gdrive_cn_en" target="_blank">Download Link</a> (Last Update: <span class="t_Cn">...</span>)</p>
-				<p>Korean: <a class="link_gdrive_cn_ko" target="_blank">Download Link</a> (Last Update: <span class="t_Cn">...</span>)</p>
-				<p>English (No Names ver): <a class="link_gdrive_cn_en_noname" target="_blank">Download Link</a> (Last Update: <span class="t_Cn">...</span>)</p>
-				<p>Korean (No Names ver): <a class="link_gdrive_cn_ko_noname" target="_blank">Download Link</a> (Last Update: <span class="t_Cn">...</span>)</p>
-				<br>
-				<p>The English patch is based off the Global client (GMS2) and the Korean patch is from the Korean client (KMS2).</p>
-				<p>The "No Names ver" has the items and achievements/trophies names are left in chinese so that you can safely link them in chat without anyone finding you suspicious (hopefully).</p>
-				<p>Make sure you backup your original Xml.m2h and Xml.m2d (or just Xml if you cannot see extensions)</p>
-				<p>You'll also need to remove the patch and place the original files back to update your game.</p>
-			</div>
-			
-			<div class="well">
-				<h3>Korean MapleStory 2 Patches</h3>
-				<p>English: <a class="link_gdrive_kr_en" target="_blank">Download Link</a> (Last Update: <span class="t_Kr">...</span>)</p>
-				<p>Chinese: <a class="link_gdrive_kr_zh" target="_blank">Download Link</a> (Last Update: <span class="t_Kr">...</span>)</p>
-				<p>English (No Names ver): <a class="link_gdrive_kr_en_noname" target="_blank">Download Link</a> (Last Update: <span class="t_Kr">...</span>)</p>
-				<p>Chinese (No Names ver): <a class="link_gdrive_kr_zh_noname" target="_blank">Download Link</a> (Last Update: <span class="t_Kr">...</span>)</p>
-				<br>
-				<p>Same as the Chinese patches but for Korea...</p>
-				<br>
-				<p>You can use a simple "Game Starter" that I made to help with starting the game without having to go through patching (you still need to patch when a new patch is out!!!)</p>
-				<p>This helps so that the nexon launcher won't start and replace the patched files. <a href="https://github.com/Miyuyami/NexonGameStarter/releases">You can find it on my github by clicking here.</a></p>
-				<p>It's very easy to setup, make a shortcut of the GameStarter.exe then right click the shortcut and select Properties. Then under "Target" add at the end " 106498" (without quotes and note the space before the number).</p>
-				<p>So if the target is "C:\Games\GameStarter.exe" you must edit it to "C:\Games\GameStarter.exe 106498". All you have to do now is run it from the shortcut.</p>
-				<br>
-				<p>As for how to use... open it and select the "Launch" option to start the game and skipping the file checking, if an error shows up or you know that there's been an update then choose the "Patch" option (make sure you put the backup "Xml" files so that they won't get redownloaded). Now wait until a new patch is available here (check "Last Update") then replace the files, now in the "game stater" choose launch again.</p>
-			</div>
-			
-			<div class="well">
-				<h3>Global MapleStory 2 Patches</h3>
-				<p>Korean & Chinese: <a class="link_gdrive_gb" target="_blank">Download Link</a> (Last Update: <span class="t_Gb">...</span>)</p>
-				<p>Korean & Chinese (No Names ver): <a class="link_gdrive_gb_noname" target="_blank">Download Link</a> (Last Update: <span class="t_Gb">...</span>)</p>
-				<p>Korean & Chinese (Fonts only): <a class="link_gdrive_gb_fontsonly" target="_blank">Download Link</a> (Last Update: <span class="t_Gb">...</span>)</p>
-				<br>
-				<p>Same as the other patches but for global client...</p>
-				<br>
-				<p>You can change to Korean or Chinese from options after you create a character. (ESC -> Options -> Languages -> Language box -> Scroll to Korean or Chinese)</p>
-				<p>If you get some error with "keyname.xml", go to "YourClientFolder\Config\GameOption.xml" and in the last few rows change "languageIndex" to "2", which means English.</p>
-				<br>
-				<p>Fonts only version adds the same Korean and Chinese languages in options but the game stays completely in english. All that changes will be the fonts used, Chinese or Korean fonts respectively. This is useful for reading and writing in those respective languages while keeping the game text completely in English.</p>
-			</div>
-			
-			<div class="well">
-				<h3>Global MapleStory 2 Sound Packs</h3>
-				<p>Korean: <a class="link_mega_sound_kr" target="_blank">Download Link</a></p>
-				<br>
-				<p>Right now I only provide the Korean sound files if you don't already have the Korean client.
-				<p>To use different voice files by just copying the sound files off another region. You do not copy all the sound files because you do NOT want to overwrite anything, you just copy the files that contain "kor" or "cn" in their file names, depending on the respective region of course.</p>
-				<br>
-				<p>After placing the sound files near your existing global files, which should be located in "YourClientFolder\Data\Sound", you will have to change a config file, which is located in "YourClientFolder\Config\GameOption.xml", somewhere in the last few rows it says "voiceIndex="2", 2 stands for English, change it to 0, which stands for Korean. For Chinese you have to change it to 3.</p>
-				<p>If you get some error with "keyname.xml", go to "YourClientFolder\Config\GameOption.xml" and in the last few rows change "languageIndex" to "2", which means English.</p>
-				<p>I haven't tested them much but they seem to work on the sounds that are also present on the respective versions, including emotes, but something like the CBT emote will NOT work because it does not exist in the Korean sound files.</p>
-			</div>
-			
-			<div class="well">
-				<h3>Patches Disclaimer</h3>
-				<p>THE PATCH IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE PATCH OR THE USE OR OTHER DEALINGS IN THE PATCH.</p>
-			</div>
-			
-			<div class="well">
-				<h4>Contact me</h4>
-				<p>In case you have a problem you are free to contact me on discord: <b>Miyu#9404</b></p>
-			</div>
-			
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-			<script src="https://momentjs.com/downloads/moment-with-locales.min.js"></script>
+			<div id="lang_content"></div>
 		</div>
-		
-		<script src="js/ms2_links.js"></script>
-		<script src="js/ms2_update_time.js"></script>
 	</body>
 </html>

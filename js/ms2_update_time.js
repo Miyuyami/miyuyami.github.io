@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(() => {
 	var url = "https://drive.google.com/uc?export=download&id=1nhiBp_nKcJ5PfTIDr0CIQjoauJ4-1kRD";
 	
 	getJSONca(url);

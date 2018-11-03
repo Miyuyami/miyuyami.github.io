@@ -46,7 +46,7 @@ function focusSearchBar() {
 	$("#ox_search").focus();
 }
 
-const publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1ZNo8-DPNOycviPd-h8n-SabhqWjJoM8a8MxLlwQ-6lY/edit?usp=sharing";
+var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1ZNo8-DPNOycviPd-h8n-SabhqWjJoM8a8MxLlwQ-6lY/edit?usp=sharing";
 function init() {
 	setEnabled(false);
 	clearSearchBar();
@@ -101,4 +101,4 @@ function showInfo(data, tabletop) {
 	focusSearchBar();
 }
 
-window.addEventListener('DOMContentLoaded', init)
+$(document).ready(init);

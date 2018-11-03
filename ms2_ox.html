@@ -14,46 +14,18 @@
 			ga('create', 'UA-84530363-1', 'auto');
 			ga('send', 'pageview');
 		</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="js/js.cookie.js"></script>
+		<script src="js/nav_controller.js"></script>
 	</head>
 
 	<body>
-		<nav class="navbar navbar-default">
-			<div class="container-fluid">
-				<div class="navbar-header">
-					<a class="navbar-brand" href="index.html">Miyu's Stuff</a>
-				</div>
-				<div>
-					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="patcher.html">Soulworker Patcher</a></li>
-						<li><a href="ms2_patches.html">MapleStory 2 Patches</a></li>
-						<li class="active"><a href="ms2_ox.html">MapleStory 2 OX</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<div id="nav_content"></div>
 		
 		<div class="container">
-			<form class="well" onsubmit="return false;">
-				<div class="input-group">
-					<input id="ox_search" type="text" class="form-control" onkeyup="search();" onfocusout="focusSearchBar();">
-					<span class="input-group-btn">
-						<button id="ox_search_button" class="btn btn-primary" type="button" onclick="handleSearchClick();">Search</button>
-					</span>
-					<span class="input-group-btn">
-					<button id="ox_refresh_button" class="btn btn-info" type="button" onclick="reloadData();">
-						<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Refresh Data
-					</button>
-					</span>
-				</div>
-			</form>
-			<div id="ox_table"></div>
-		
-			<script src="https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js"></script>
-			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-			<script src="js/utils.js"></script>
-			<script src="js/ms2_ox.js"></script>
+			<div id="lang_content"></div>
 		</div>
 	</body>
 </html>
