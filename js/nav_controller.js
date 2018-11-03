@@ -1,5 +1,5 @@
-const CurrentPage = "/" + window.location.pathname.split("/").slice(-1); // local files
-//const CurrentPage = window.location.pathname; // http
+//const CurrentPage = "/" + window.location.pathname.split("/").slice(-1); // local files
+const CurrentPage = window.location.pathname; // http
 const navPage = "nav.html";
 const pages = [
 	"/index.html",
