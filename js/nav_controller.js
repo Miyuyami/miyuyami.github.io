@@ -27,18 +27,7 @@ pagesLangSupport.set(pages[1], [ languages[0], languages[1] ]);
 pagesLangSupport.set(pages[2], [ languages[0] ]);
 pagesLangSupport.set(pages[3], [ languages[0] ]);
 
-let CurrentPage;
-if (window.location.protocol.includes("file")) {
-	// we're in local mode
-	const basePath = "C:/Users/Miyu/Documents/GitHub/miyuyami.github.io";
-	CurrentPage = window.location.pathname.replace(basePath, "").substr(2);
-} else {
-	CurrentPage = window.location.pathname.substr(1);
-}
-
-if (!CurrentPage) {
-	CurrentPage = indexPage;
-}
+const CurrentPage = window.location.pathname.substr(1) ? window.location.pathname.substr(1) : indexPage;
 
 $(document).ready(() => {
 	$("#nav_content").load(navPage, () => {
@@ -61,35 +50,42 @@ function loadLanguages(page) {
 		$("#nav_content div.nav-right ul.nav.navbar-nav.navbar-right li.dropdown ul.dropdown-menu").append(`<li class="clickable" id="${e}"><a>${languagesTextMap.get(e)}</a></li>`)
 	});
 	
-	$("#nav_content div.nav-right ul.nav.navbar-nav.navbar-right").on("click", "li.dropdown ul.dropdown-menu li.clickable", handleOnClickLanguage);
+	$("#nav_content div.nav-right ul.nav.navbar-nav.navbar-right").on("click", "li.dropdown ul.dropdown-menu li.clickable", languageOnClick);
 	
 	return pageLanguages;
 }
 
 function selectLanguageFromCookies(pageLanguages) {
 	const cookieValue = Cookies.get("language");
-	const $dropdown = $("#nav_content div.nav-right ul.nav.navbar-nav.navbar-right li.dropdown ul.dropdown-menu");
 	
 	if (pageLanguages.includes(cookieValue)) {
-		$dropdown.children(`#${cookieValue}`).trigger("click");
+		setLanguage(cookieValue);
 	} else {
-		$dropdown.children(`#${defaultLanguage}`).trigger("click");
+		setLanguage(defaultLanguage);
 	}
 }
 
-function handleOnClickLanguage(e) {
-	const $this = $(this);
-	const $menuChildren = $this.parent(".dropdown-menu").children(".active");
-	const langCode = $this.attr("id");
-	$this.addClass("active");
-	$this.removeClass("clickable");
+function languageOnClick(e) {
+	const langCode = $(this).attr("id");
+	
+	Cookies.set("language", langCode, { expires: 20 * 365 });
+	
+	setLanguage(langCode);
+}
+
+function setLanguage(langCode) {
+	const $dropdown = $("#nav_content div.nav-right ul.nav.navbar-nav.navbar-right li.dropdown ul.dropdown-menu");
+	const $menuChildren = $dropdown.children(".active");
+	const $menuSelectedLanguage = $dropdown.children(`li#${langCode}.clickable`);
+	
+	$menuSelectedLanguage.addClass("active");
+	$menuSelectedLanguage.removeClass("clickable");
 	$menuChildren.addClass("clickable");
 	$menuChildren.removeClass("active");
 	
-	Cookies.set("language", langCode, { expires: 20 * 365 });
-	setPageLanguage(CurrentPage, langCode);
+	setPageLanguageContent(CurrentPage, langCode);
 }
 
-function setPageLanguage(page, lang) {
-	$("#lang_content").load(`${page.split(".").slice(0, -1).join(".")}.${lang}.html`);
+function setPageLanguageContent(page, langCode) {
+	$("#lang_content").load(page.replace(".html", `.${langCode}.html`));
 }
