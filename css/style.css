@@ -1,3 +1,7 @@
 .clickable {
     cursor: pointer;
 }
+
+.container {
+	padding-top: 5rem
+}

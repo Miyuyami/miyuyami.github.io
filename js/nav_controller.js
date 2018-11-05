@@ -40,17 +40,17 @@ $(document).ready(() => {
 });
 
 function activateNavItem(itemPath) {
-	$(`#nav_content div.nav-main ul.nav.navbar-nav li a[href='${itemPath}']`).parent("li").addClass("active");
+	$(`#nav_content .navbar-nav a[href='${itemPath}']`).parent("li").addClass("active");
 }
 
 function loadLanguages(page) {
 	const pageLanguages = pagesLangSupport.get(page);
 	
 	pageLanguages.forEach(e => {
-		$("#nav_content div.nav-right ul.nav.navbar-nav.navbar-right li.dropdown ul.dropdown-menu").append(`<li class="clickable" id="${e}"><a>${languagesTextMap.get(e)}</a></li>`)
+		getLanguageDropdownMenu().append(`<li class="dropdown-item clickable" id="${e}"><a>${languagesTextMap.get(e)}</a></li>`)
 	});
 	
-	$("#nav_content div.nav-right ul.nav.navbar-nav.navbar-right").on("click", "li.dropdown ul.dropdown-menu li.clickable", languageOnClick);
+	getLanguageDropdownMenu().on("click", ".clickable", languageOnClick);
 	
 	return pageLanguages;
 }
@@ -66,7 +66,8 @@ function selectLanguageFromCookies(pageLanguages) {
 }
 
 function languageOnClick(e) {
-	const langCode = $(this).attr("id");
+	const $this = $(this);
+	const langCode = $this.attr("id");
 	
 	Cookies.set("language", langCode, { expires: 20 * 365 });
 	
@@ -74,9 +75,9 @@ function languageOnClick(e) {
 }
 
 function setLanguage(langCode) {
-	const $dropdown = $("#nav_content div.nav-right ul.nav.navbar-nav.navbar-right li.dropdown ul.dropdown-menu");
+	const $dropdown = getLanguageDropdownMenu();
 	const $menuChildren = $dropdown.children(".active");
-	const $menuSelectedLanguage = $dropdown.children(`li#${langCode}.clickable`);
+	const $menuSelectedLanguage = $dropdown.children(`#${langCode}.clickable`);
 	
 	$menuSelectedLanguage.addClass("active");
 	$menuSelectedLanguage.removeClass("clickable");
@@ -84,6 +85,10 @@ function setLanguage(langCode) {
 	$menuChildren.removeClass("active");
 	
 	setPageLanguageContent(CurrentPage, langCode);
+}
+
+function getLanguageDropdownMenu() {
+	return $("#lang_dropdown").parent(".dropdown").children(".dropdown-menu");
 }
 
 function setPageLanguageContent(page, langCode) {

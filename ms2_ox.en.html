@@ -1,19 +1,19 @@
-<div lang="en">
-	<form class="well" onsubmit="return false;">
+<div class="container" lang="en">
+	<form class="mt-2" onsubmit="return false;">
 		<div class="input-group">
-			<input id="ox_search" type="text" class="form-control" onkeyup="search();" onfocusout="focusSearchBar();">
-			<span class="input-group-btn">
+			<input id="ox_search" class="form-control" type="text" onkeyup="search();" onfocusout="focusSearchBar();">
+			<div class="input-group-append">
 				<button id="ox_search_button" class="btn btn-primary" type="button" onclick="handleSearchClick();">Search</button>
-			</span>
-			<span class="input-group-btn">
-			<button id="ox_refresh_button" class="btn btn-info" type="button" onclick="reloadData();">
-				<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Refresh Data
-			</button>
-			</span>
+				<button id="ox_refresh_button" class="btn btn-info" type="button" onclick="reloadData();">
+					<svg version="1.1" width="12" height="16" viewBox="0 0 12 12">
+						<path fill="#FFFFFF" fill-rule="evenodd" d="M10.24 7.4a4.15 4.15 0 0 1-1.2 3.6 4.346 4.346 0 0 1-5.41.54L4.8 10.4.5 9.8l.6 4.2 1.31-1.26c2.36 1.74 5.7 1.57 7.84-.54a5.876 5.876 0 0 0 1.74-4.46l-1.75-.34zM2.96 5a4.346 4.346 0 0 1 5.41-.54L7.2 5.6l4.3.6-.6-4.2-1.31 1.26c-2.36-1.74-5.7-1.57-7.85.54C.5 5.03-.06 6.65.01 8.26l1.75.35A4.17 4.17 0 0 1 2.96 5z"/>
+					</svg> Refresh Data
+				</button>
+			</div>
 		</div>
 	</form>
 	
-	<div id="ox_table"></div>
+	<ul id="ox_table" class="list-group mt-3"></div>
 </div>
 	
 <script src="js/utils.js" defer></script>

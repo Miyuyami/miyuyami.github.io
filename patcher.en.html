@@ -1,182 +1,197 @@
-<div class="well" lang="en">
-	<div class="well">
-		<h3>Description</h3>
-		<p>Soulworker Patcher was made to easily download and patch latest translations into your Soulworker Client using the files from your client. This makes it compatible with almost any version, even if the translation is outdated. It is still recommended to always get the latest translations.</p>
-		<p>The translations are downloaded from SWHQ Translation team and the original files are backed up, they will be restored after the client closes.</p>
-		<p>Soulworker Patcher requires the game to be installed before using it. Both Japanese version and Korean versions are supported. If you have both installed, you can change the "Game Location" if you want to access the other region.</p>
-	</div>
-	
-	<div class="well">
-		<h3>Functions</h3>
-		<ul>
-			<li>Backs up the original files and replaces them with the downloaded translations.</li>
-			<li>Auto-updates the Soulworker client when it's outdated. (JP region only)</li>
-			<li>Unicode codepage fix to support unicode languages excluding the server region's language</li>
-			<li>Direct login for faster startup. (JP region only, for KR region it only opens Stove)</li>
-		</ul>
-	</div>
-	
-	<div class="well">
-		<h3>How to use</h3>
-		<ul class="nav nav-tabs">
-			<li class="active"><a data-toggle="tab" href="#jp_server">Japanese Server</a></li>
-			<li><a data-toggle="tab" href="#kr_server">Korean Server</a></li>
-		</ul>
-		<div class="tab-content">
-			<div id="jp_server" class="tab-pane fade in active">
-				<ul class="nav nav-tabs">
-					<li class="active"><a data-toggle="tab" href="#jp_server_default">Manual Start</a></li>
-					<li><a data-toggle="tab" href="#jp_server_login">Auto Start</a></li>
-				</ul>
-				<div class="tab-content">
-					<div id="jp_server_default" class="tab-pane well fade in active">
-						<ol type="1">
-							<li>press "Ready to Play", if no pop-up message shows up, skip to 2</li>
-							<ol type="I">
-								<li>if the message says "Outdated translation files, force patching will now commence."</li>
-								<li>press OK and wait for it to finish patching</li>
-								<li>press "Ready to Play" again</li>
-							</ol>
-							<li>go to <a href="http://soulworker.jp">Soulworker Japan</a> (you might need VPN)</li>
-							<li>login on the hangame website</li>
-							<li>press "GAME START" button</li>
-							<li>when hangame's launcher shows up, press "GAME START" button on launcher</li>
-							<li>enjoy!!</li>
-						</ol>
-					</div>
-					<div id="jp_server_login" class="tab-pane well fade">
-						<ol type="1">
-							<li>Not supported at this moment</li>
-							<!--<li>click "Settings" menu</li>
-							<li>click "Credentials" tab</li>
-							<li>check "Login using the Patcher"</li>
-							<li>write your hangame ID and password in the respective fields</li>
-							<li>press "OK"</li>
-							<li>press "Ready to Play", if no pop-up message shows up, skip to 7</li>
-							<ol type="I">
-								<li>if the message says "Outdated translation files, force patching will now commence."</li>
-								<li>press "OK" and wait for it to finish patching</li>
-								<li>press "Ready to Play" again</li>
-							</ol>
-							<li>if "Validation failed." message shows up, connect your VPN and press "Retry"</li>
-							<li>enjoy!!</li>-->
-						</ol>
-					</div>
-				</div>
+<div lang="en">
+	<div class="card-deck mt-3 mb-3">
+		<div class="card">
+			<h4 class="card-header">Description</h4>
+			<div class="card-body">
+				<p class="card-text">Soulworker Patcher was made to easily download and patch latest translations into your Soulworker Client using the files from your client. This makes it compatible with almost any version, even if the translation is outdated. It is still recommended to always get the latest translations.</p>
+				<p class="card-text">The translations are downloaded from the SWHQ Translation team and the original files are backed up, they will be restored after the client closes.</p>
+				<p class="card-text">Soulworker Patcher requires the game to be installed before using it. Both Japanese version and Korean versions are supported.</p>
 			</div>
-			<div id="kr_server" class="tab-pane fade">
-				<ul class="nav nav-tabs">
-					<li class="active"><a data-toggle="tab" href="#kr_server_default">Manual Start</a></li>
-					<li><a data-toggle="tab" href="#kr_server_login">Auto Start</a></li>
+		</div>
+		
+		<div class="card">
+			<h4 class="card-header">Functions</h4>
+			<div class="card-body">
+				<ul class="card-text">
+					<li>Back ups the original files and replaces them with the downloaded translations</li>
+					<li>Auto-updates the Soulworker client when it's outdated. (JP region only)</li>
+					<li><s>Direct login for faster startup. (JP region only, for KR region it only opens Stove)</s> (currently not working)</li>
 				</ul>
-				<div class="tab-content">
-					<div id="kr_server_default" class="tab-pane well fade in active">
-						<ol type="1">
-							<li>press "Ready to Play", if no pop-up message shows up, skip to 2</li>
-							<ol type="I">
-								<li>if the message says "Outdated translation files, force patching will now commence."</li>
-								<li>press OK and wait for it to finish patching</li>
-								<li>press "Ready to Play" again</li>
-							</ol>
-							<li>if you open stove directly, skip to 6</li>
-							<li>go to <a href="http://soulworker.co.kr">Soulworker Korea</a></li>
-							<li>login on the onstove website</li>
-							<li>press "GAME START" button</li>
-							<li>when Stove shows up, press the button under "Soulworker"</li>
-							<li>enjoy!!</li>
-						</ol>
-					</div>
-					<div id="kr_server_login" class="tab-pane well fade">
-						<ol type="1">
-							<li>click "Settings" menu</li>
-							<li>click "Credentials" tab</li>
-							<li>check "Login using the Patcher"</li>
-							<li>write your onstove Email and password in the respective fields</li>
-							<li>press "OK"</li>
-							<li>press "Ready to Play", if no pop-up message shows up, skip to 7</li>
-							<ol type="I">
-								<li>if the message says "Outdated translation files, force patching will now commence."</li>
-								<li>press "OK" and wait for it to finish patching</li>
-								<li>press "Ready to Play" again</li>
-							</ol>
-							<li>when Stove shows up, press the button under "Soulworker"</li>
-							<li>enjoy!!</li>
-						</ol>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class="well">
-		<h3>Download</h3>
-		<p><a class="link_setup" target="_blank">Patcher Setup</a></p>
-		<h3>VirusTotal</h3>
-		<p><a class="link_vt_setup" target="_blank">Patcher Setup - VirusTotal Analysis</a></p>
-		<p><a class="link_vt_exe" target="_blank">SWPatcher.exe - VirusTotal Analysis</a></p>
+	<div class="card mb-3">
+		<h4 class="card-header">How to use</h4>
+		<div class="card-body">
+			<ul id="howToUseServerTabs" class="nav nav-tabs" role="tablist">
+				<li class="nav-item"><a id="jp_tab" class="nav-link active" href="#jp_server" data-toggle="tab" aria-controls="jp_server" aria-selected="true">Japanese Server</a></li>
+				<li class="nav-item"><a id="kr_tab" class="nav-link" href="#kr_server" data-toggle="tab" aria-controls="kr_server" aria-selected="false">Korean Server</a></li>
+			</ul>
+			<div id="howToUseContent" class="tab-content">
+				<div id="jp_server" class="tab-pane fade show active" role="tabpanel" aria-labelledby="jp_tab">
+					<ul id="howToUseJpTabs" class="nav nav-tabs" role="tablist">
+						<li class="nav-item"><a id="jp_default_tab" class="nav-link active" href="#jp_server_default" data-toggle="tab" aria-controls="jp_server_default" aria-selected="true">Manual Start</a></li>
+						<li class="nav-item"><a id="jp_login_tab" class="nav-link" href="#jp_server_login" data-toggle="tab" aria-controls="jp_server_login" aria-selected="false">Auto Start</a></li>
+					</ul>
+					<div id="howToUseJpContent" class="tab-content">
+						<div id="jp_server_default" class="tab-pane fade show active" role="tabpanel" aria-labelledby="jp_default_tab">
+							<ol class="card-text" type="1">
+								<li>press "Ready to Play", if no pop-up message shows up, skip to 2</li>
+								<ol type="I">
+									<li>if the message says "Outdated translation files, force patching will now commence."</li>
+									<li>press OK and wait for it to finish patching</li>
+									<li>press "Ready to Play" again</li>
+								</ol>
+								<li>go to <a href="http://soulworker.jp">Soulworker Japan</a> (you might need VPN)</li>
+								<li>login on the hangame website</li>
+								<li>press "GAME START" button</li>
+								<li>when hangame's launcher shows up, press "GAME START" button on launcher</li>
+								<li>enjoy!!</li>
+							</ol>
+						</div>
+						<div id="jp_server_login" class="tab-pane fade" role="tabpanel" aria-labelledby="jp_login_tab">
+							<ol class="card-text" type="1">
+								<li>Not supported at this moment</li>
+								<!--<li>click "Settings" menu</li>
+								<li>click "Credentials" tab</li>
+								<li>check "Login using the Patcher"</li>
+								<li>write your hangame ID and password in the respective fields</li>
+								<li>press "OK"</li>
+								<li>press "Ready to Play", if no pop-up message shows up, skip to 7</li>
+								<ol type="I">
+									<li>if the message says "Outdated translation files, force patching will now commence."</li>
+									<li>press "OK" and wait for it to finish patching</li>
+									<li>press "Ready to Play" again</li>
+								</ol>
+								<li>if "Validation failed." message shows up, connect your VPN and press "Retry"</li>
+								<li>enjoy!!</li>-->
+							</ol>
+						</div>
+					</div>
+				</div>
+				<div id="kr_server" class="tab-pane fade" role="tabpanel" aria-labelledby="kr_tab">
+					<ul id="howToUseKrTabs" class="nav nav-tabs" role="tablist">
+						<li class="nav-item"><a id="kr_default_tab" class="nav-link active" href="#kr_server_default" data-toggle="tab" aria-controls="kr_server_default" aria-selected="true">Manual Start</a></li>
+						<li class="nav-item"><a id="kr_login_tab" class="nav-link" href="#kr_server_login" data-toggle="tab" aria-controls="kr_server_login" aria-selected="false">Auto Start</a></li>
+					</ul>
+					<div id="howToUseKrContent" class="tab-content">
+						<div id="kr_server_default" class="tab-pane fade show active" role="tabpanel" aria-labelledby="kr_default_tab">
+							<ol class="card-text" type="1">
+								<li>press "Ready to Play", if no pop-up message shows up, skip to 2</li>
+								<ol type="I">
+									<li>if the message says "Outdated translation files, force patching will now commence."</li>
+									<li>press OK and wait for it to finish patching</li>
+									<li>press "Ready to Play" again</li>
+								</ol>
+								<li>if you open stove directly, skip to 6</li>
+								<li>go to <a href="http://soulworker.co.kr">Soulworker Korea</a></li>
+								<li>login on the onstove website</li>
+								<li>press "GAME START" button</li>
+								<li>when Stove shows up, press the button under "Soulworker"</li>
+								<li>enjoy!!</li>
+							</ol>
+						</div>
+						<div id="kr_server_login" class="tab-pane fade" role="tabpanel" aria-labelledby="kr_login_tab">
+							<ol class="card-text" type="1">
+								<li>click "Settings" menu</li>
+								<li>click "Credentials" tab</li>
+								<li>check "Login using the Patcher"</li>
+								<li>write your onstove Email and password in the respective fields</li>
+								<li>press "OK"</li>
+								<li>press "Ready to Play", if no pop-up message shows up, skip to 7</li>
+								<ol type="I">
+									<li>if the message says "Outdated translation files, force patching will now commence."</li>
+									<li>press "OK" and wait for it to finish patching</li>
+									<li>press "Ready to Play" again</li>
+								</ol>
+								<li>when Stove shows up, press the button under "Soulworker"</li>
+								<li>enjoy!!</li>
+							</ol>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
 	</div>
 	
-	<div class="well">
-		<h3>FAQ (Common Problems)</h3>
-		<ul>
-			<li>
-				<h4>For any error when installing or running the patcher, try these fixes first</h4>
-				<ul>
-					<li>Make sure you have the requirements to install or manually install <a target="_blank" href="https://www.microsoft.com/en-us/download/details.aspx?id=53344">Microsoft .NET Framework 4.6.2</a></li>
-					<li>Add "%localappdata%\Apps\2.0" to your anti-virus exception list</li>
-					<li>Run the setup.exe as administrator</li>
-					<li>Reset Internet Explorer settings, Internet Explorer advanced settings and Internet Explorer security zones. Those can be found in Control Panel -> Internet Options</li>
-				</ul>
-			</li>
-			<li>
-				<h4>"Application cannot be started. Contact the application vendor." error on startup</h4>
-				<ol>
-					<li>uninstall the Soulworker Patcher from Control Panel/Programs and Features</li>
-					<li>go to "%localappdata%\Apps\2.0" then 2 more folders with random letters</li>
-					<li>you should see a lot of folders with long names, delete the ones starting with "swpa"</li>
-					<li>now go in "manifests" folder and do the same as above</li>
-					<li>then go back to "2.0" folder and do the same for "Data" folder</li>
-					<li>after all that, press "Windows Key + R" (Run box) and type or copy-paste the following (without quotes)</li>
-					<li>"rundll32 %SystemRoot%\system32\dfshim.dll CleanOnlineAppCache"</li>
-					<li>press enter</li>
-					<li>try to install Soulworker Patcher again</li>
-				</ol>
-			</li>
-			<li>
-				<h4>At server selection screen, the server name looks like some gibberish...</h4>
-				<img src="https://i.imgur.com/x7Ij1Ql.png" class="img-responsive" alt="Gibberish Server Name">
-				<p>It's a side effect of the unicode codepage fix. It will not affect anything else.</p>
-			</li>
-			<li>
-				<h4>I get this error when starting the patcher</h4>
-				<img src="https://i.imgur.com/SVS1Dgw.png" class="img-responsive" alt="Right Permissions Error">
-				<ol>
-					<li>for some reason Soulworker Patcher couldn't gain access to the game folder</li>
-					<li>you should add the permissions manually, like this</li>
-					<li>go to your "soulworker" folder Properties on Security tab</li>
-					<img src="https://i.imgur.com/camuTge.png" class="img-responsive" alt="Properties->Security">
-					<li>then go to Edit, then Add</li>
-					<li>write the name of your windows user, press Check Names, then press OK</li>
-					<li>select the group that was created and check the boxes like this<br>
-						note: instead of "Miyu" it should be the name of your windows user</li>
-					<img src="https://i.imgur.com/y7wkQC6.png" class="img-responsive" alt="Modify, Read&Execute, List, Read, Write">
-					<li>save the changes</li>
-					<li>run Soulworker Patcher again and it should work</li>
-				</ol>
-			</li>
-		</ul>
-	</div>
-	
-	<div class="well">
-		<h3>Tutorial video made by <a target="_blank" href="http://soulworkerhq.com/User-Plutia">Plutia</a></h3>
-		<div class="embed-responsive embed-responsive-16by9">
-			<iframe class="embed-responsive-item link_yt_tutorial"></iframe>
+	<div class="card-deck mb-3">
+		<div class="card">
+			<h4 class="card-header">Download Links</h4>
+			<div class="card-body">
+				<a id="link_setup" class="card-link" target="_blank">Installer</a>
+			</div>
+		</div>
+		
+		<div class="card">
+			<h4 class="card-header">VirusTotal Analysis Links</h4>
+			<div class="card-body">
+				<a id="link_vt_setup" class="card-link" target="_blank">Installer</a>
+				<a id="link_vt_exe" class="card-link" target="_blank">Executable</a>
+			</div>
 		</div>
 	</div>
 	
-	<div class="well">
-		<h4>Contact me</h4>
-		<p>In case you have a problem with the patcher you can contact me on discord: <b>Miyu#9404</b></p>
+	<div class="card mb-3">
+		<h4 class="card-header">FAQ (Common Problems)</h4>
+		<div class="card-body">
+			<h5 class="card-title">For any error when installing or running the patcher, try these fixes first</h5>
+			<ul class="card-text">
+				<li>Make sure you have the requirements to install or manually install <a target="_blank" href="https://www.microsoft.com/en-us/download/details.aspx?id=53344">Microsoft .NET Framework 4.6.2</a></li>
+				<li>Add "%localappdata%\Apps\2.0" to your anti-virus exception list</li>
+				<li>Run the setup.exe as administrator</li>
+				<li>Reset Internet Explorer settings, Internet Explorer advanced settings and Internet Explorer security zones. Those can be found in Control Panel -> Internet Options</li>
+			</ul>
+			
+			<h5 class="card-title">"Application cannot be started. Contact the application vendor." error on startup</h5>
+			<ol class="card-text">
+				<li>uninstall the Soulworker Patcher from Control Panel/Programs and Features</li>
+				<li>go to "%localappdata%\Apps\2.0" then 2 more folders with random letters</li>
+				<li>you should see a lot of folders with long names, delete the ones starting with "swpa"</li>
+				<li>now go in "manifests" folder and do the same as above</li>
+				<li>then go back to "2.0" folder and do the same for "Data" folder</li>
+				<li>after all that, press "Windows Key + R" (Run box) and type or copy-paste the following (without quotes)</li>
+				<li>"rundll32 %SystemRoot%\system32\dfshim.dll CleanOnlineAppCache"</li>
+				<li>press enter</li>
+				<li>try to install Soulworker Patcher again</li>
+			</ol>
+			
+			<h5 class="card-title">At server selection screen, the server name looks like some gibberish...</h5>
+			<img src="https://i.imgur.com/x7Ij1Ql.png" class="img-fluid" alt="Gibberish Server Name">
+			<p class="card-text">It's a side effect of the unicode codepage fix. It will not affect anything else.</p>
+			
+			<h5 class="card-title">I get this error when starting the patcher</h5>
+			<img src="https://i.imgur.com/SVS1Dgw.png" class="img-fluid" alt="Right Permissions Error">
+			<ol class="card-text">
+				<li>for some reason Soulworker Patcher couldn't gain access to the game folder</li>
+				<li>you should add the permissions manually, like this</li>
+				<li>go to your "soulworker" folder Properties on Security tab</li>
+				<img src="https://i.imgur.com/camuTge.png" class="img-fluid" alt="Properties->Security">
+				<li>then go to Edit, then Add</li>
+				<li>write the name of your windows user, press Check Names, then press OK</li>
+				<li>select the group that was created and check the boxes like this<br>
+					note: instead of "Miyu" it should be the name of your windows user</li>
+				<img src="https://i.imgur.com/y7wkQC6.png" class="img-fluid" alt="Modify, Read&Execute, List, Read, Write">
+				<li>save the changes</li>
+				<li>run Soulworker Patcher again and it should work</li>
+			</ol>
+		</div>
+	</div>
+	
+	<div class="card mb-3">
+		<h4 class="card-header">Tutorial video made by <a target="_blank" href="http://soulworkerhq.com/User-Plutia">Plutia</a></h4>
+		<div class="card-body">
+			<div class="embed-responsive embed-responsive-16by9">
+				<iframe id="link_yt_tutorial" class="embed-responsive-item"></iframe>
+			</div>
+		</div>
+	</div>
+	
+	<div class="card mb-3">
+		<h5 class="card-header">Contact me</h5>
+		<div class="card-body">
+			<p class="card-text">In case you have a problem with the patcher you can contact me on discord: <b>Miyu#9404</b></p>
+		</div>
 	</div>
 </div>
 

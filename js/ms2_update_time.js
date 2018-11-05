@@ -8,7 +8,7 @@ function updateTime(data) {
 	var fields = Object.keys(data);
 	for (var i in fields) {
 		var m = moment(data[fields[i]], "DD/MM/YYYY hh:mm A ZZ");
-		$("span." + fields[i]).text(m.fromNow());
+		$(`#${fields[i]}`).text(m.fromNow());
 	}
 }
 
