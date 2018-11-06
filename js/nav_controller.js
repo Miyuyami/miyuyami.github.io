@@ -1,10 +1,10 @@
 const pages = [
-	"index.html",
-	"patcher.html",
-	"ms2_patches.html",
-	"ms2_ox.html",
+	"/index.html",
+	"/sw/patcher.html",
+	"/ms2/patches.html",
+	"/ms2/ox.html",
 ];
-const navPage = "nav.html";
+const navPage = window.location.origin + "/nav.html";
 const indexPage = pages[0];
 
 const languages = [
@@ -27,7 +27,7 @@ pagesLangSupport.set(pages[1], [ languages[0], languages[1] ]);
 pagesLangSupport.set(pages[2], [ languages[0] ]);
 pagesLangSupport.set(pages[3], [ languages[0] ]);
 
-const CurrentPage = window.location.pathname.substr(1) ? window.location.pathname.substr(1) : indexPage;
+const CurrentPage = window.location.pathname !== "/" ? window.location.pathname : indexPage;
 
 $(document).ready(() => {
 	$("#nav_content").load(navPage, () => {
