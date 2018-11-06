@@ -40,7 +40,8 @@ $(document).ready(() => {
 });
 
 function activateNavItem(itemPath) {
-	$(`#nav_content .navbar-nav a[href='${itemPath}']`).parent("li").addClass("active");
+	$(`#nav_content .navbar-nav a[href='${itemPath}']`).addClass("active");
+	$(`#nav_content .navbar-nav a[href='${itemPath}']`).parents("li").addClass("active");
 }
 
 function loadLanguages(page) {
@@ -88,7 +89,7 @@ function setLanguage(langCode) {
 }
 
 function getLanguageDropdownMenu() {
-	return $("#lang_dropdown").parent(".dropdown").children(".dropdown-menu");
+	return $("#lang_dropdown").parents(".dropdown").children(".dropdown-menu");
 }
 
 function setPageLanguageContent(page, langCode) {

@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
-	<a class="navbar-brand" href="index.html">Miyu's Stuff</a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand" href="/index.html">Miyu's Stuff</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav_main" aria-controls="nav_main" aria-expanded="false" aria-label="Toggle navigation">
 		<span class="navbar-toggler-icon"></span>
 	</button>
@@ -7,9 +7,21 @@
 	<div id="nav_main" class="collapse navbar-collapse">
 		<ul class="navbar-nav mr-auto">
 			<li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
-			<li class="nav-item"><a class="nav-link" href="/sw/patcher.html">Soulworker Patcher</a></li>
-			<li class="nav-item"><a class="nav-link" href="/ms2/patches.html">MapleStory 2 Patches</a></li>
-			<li class="nav-item"><a class="nav-link" href="/ms2/ox.html">MapleStory 2 OX</a></li>
+			
+			<li class="nav-item dropdown dropdown-hoverable">
+				<a id="sw_dropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Soulworker</a>
+				<div class="dropdown-menu" aria-labelledby="sw_dropdown">
+					<a class="dropdown-item" href="/sw/patcher.html">Patcher</a>
+				</div>
+			</li>
+			
+			<li class="nav-item dropdown dropdown-hoverable">
+				<a id="ms2_dropdown" class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">MapleStory 2</a>
+				<div class="dropdown-menu" aria-labelledby="ms2_dropdown">
+					<a class="dropdown-item" href="/ms2/patches.html">Patches</a>
+					<a class="dropdown-item" href="/ms2/ox.html">OX Quiz</a>
+				</div>
+			</li>
 		</ul>
 		
 		<ul class="navbar-nav ml-auto">

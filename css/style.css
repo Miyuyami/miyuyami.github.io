@@ -3,5 +3,10 @@
 }
 
 .container {
-	padding-top: 5rem
+	padding-top: 1rem;
+}
+
+.dropdown-hoverable:hover>.dropdown-menu {
+	display: block;
+	margin-top: -1px;
 }
