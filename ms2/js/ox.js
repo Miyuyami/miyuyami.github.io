@@ -5,7 +5,7 @@ function search() {
 	$("#ox_table li").each((idx, li) => {
 		var li_text = li.innerText.toLowerCase();
 		
-		if ((values.some(w => w.length >= 3 && w !== "the") ||
+		if ((values.some(w => w.length >= 3 && w !== "the" && w !== "and") ||
 			 values.filter(w => containsNumber(w)).length >= 2) &&
 			values.every((v) => ~li_text.indexOf(v))) {
 			$(li).css("display", "");
