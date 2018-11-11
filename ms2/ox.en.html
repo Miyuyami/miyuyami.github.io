@@ -4,11 +4,16 @@
 			<input id="ox_search" class="form-control" type="text" onkeyup="search();" onfocusout="focusSearchBar();">
 			<div class="input-group-append">
 				<button id="ox_search_button" class="btn btn-primary" type="button" onclick="handleSearchClick();">Search</button>
-				<button id="ox_refresh_button" class="btn btn-info" type="button" onclick="reloadData();">
-					<svg version="1.1" width="12" height="16" viewBox="0 0 12 12">
+				<button id="ox_refresh_button" class="btn btn-info" type="button" onclick="reloadData();" title="Loaded questions: {0}<br>True: {1}<br>False: {2}" data-toggle="tooltip" data-placement="bottom" data-html="true">
+					<svg version="1.1" width="12" height="16" viewBox="0 0 12 12" aria-hidden="true">
 						<path fill="#FFFFFF" fill-rule="evenodd" d="M10.24 7.4a4.15 4.15 0 0 1-1.2 3.6 4.346 4.346 0 0 1-5.41.54L4.8 10.4.5 9.8l.6 4.2 1.31-1.26c2.36 1.74 5.7 1.57 7.84-.54a5.876 5.876 0 0 0 1.74-4.46l-1.75-.34zM2.96 5a4.346 4.346 0 0 1 5.41-.54L7.2 5.6l4.3.6-.6-4.2-1.31 1.26c-2.36-1.74-5.7-1.57-7.85.54C.5 5.03-.06 6.65.01 8.26l1.75.35A4.17 4.17 0 0 1 2.96 5z"/>
 					</svg> Refresh Data
 				</button>
+				<span id="info_tooltip" class="input-group-text" title="You have to write a word with at least 3 or more letters (&quot;the&quot; and &quot;and&quot; excluded), or 2 words with just numbers.<br>You can use half words to search and word placement is not important, for example looking for &quot;Lithographs use the immiscibility of oil and water.&quot; all you have to search for is &quot;wat imm&quot;." data-toggle="tooltip" data-placement="bottom" data-html="true">
+					<svg width="16" height="16" viewBox="0 0 14 16" aria-hidden="true">
+						<path fill-rule="evenodd" d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z"></path>
+					</svg>
+				</span>
 			</div>
 		</div>
 	</form>

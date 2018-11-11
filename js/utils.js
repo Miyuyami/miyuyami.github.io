@@ -1,8 +1,6 @@
 // https://stackoverflow.com/questions/6913512/how-to-sort-an-array-of-objects-by-multiple-fields
 
-var sort_by;
-
-(function() {
+function sort_by() {
     // utility functions
     var default_cmp = function(a, b) {
         if (a == b) return 0;
@@ -60,4 +58,14 @@ var sort_by;
             return result;
         }
     }
-}());
+}
+
+String.prototype.format = String.prototype.f = function() {
+    var s = this,
+        i = arguments.length;
+
+    while (i--) {
+        s = s.replace(new RegExp('\\{' + i + '\\}', 'gm'), arguments[i]);
+    }
+    return s;
+};

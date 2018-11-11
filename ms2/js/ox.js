@@ -48,6 +48,7 @@ function focusSearchBar() {
 
 var publicSpreadsheetUrl = "https://docs.google.com/spreadsheets/d/1ZNo8-DPNOycviPd-h8n-SabhqWjJoM8a8MxLlwQ-6lY/edit?usp=sharing";
 function init() {
+    $("[data-toggle=\"tooltip\"]").tooltip().tooltip("hide"); 
 	setEnabled(false);
 	clearSearchBar();
 	
@@ -97,8 +98,21 @@ function showInfo(data, tabletop) {
 		addQuestion(ox.Question, ox.Result === "O");
 	});
 	
+	setRefreshButtonTooltip(questions);
 	setEnabled(true);
 	focusSearchBar();
+}
+
+var refreshButtonTooltipFormat;
+function setRefreshButtonTooltip(questions) {
+	const $refreshButton = $("#ox_refresh_button");
+	if (refreshButtonTooltipFormat === undefined ||
+		refreshButtonTooltipFormat === "") {
+		refreshButtonTooltipFormat = $refreshButton.attr("data-original-title");
+	}
+	
+	$refreshButton.attr("title", refreshButtonTooltipFormat.format(questions.length, questions.filter(q => q.Result === "O").length, questions.filter(q => q.Result === "X").length))
+				  .tooltip("_fixTitle");
 }
 
 $(document).ready(init);
