@@ -31,4 +31,9 @@ $(document).ready(() => {
 	
 	$("#link_mega_sound_kr").attr("href", "https://mega.nz/#!q14DRS7J!IeHl4c4bpEjwtXVuNUawOMmnzQLakQXYa_JB6H2NguA");
 	$("#link_mega_sound_cn").attr("href", "https://mega.nz/#!7so3mSzR!n3H8iFRfNhsgVG_SkcYIC4_Kwk7Y2lt8IJeGSF9np_8");
+	
+	
+	$("#link_github_ms2tools_releases").attr("href", "https://github.com/Miyuyami/MS2Tools/releases");
+	
+	$("#link_mod_pastebin_chaosmeter").attr("href", "https://pastebin.com/raw/RdnQ7Mct");
 });

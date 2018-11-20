@@ -4,6 +4,7 @@ const pages = [
 	"/ms2/patches.html",
 	"/ms2/ox.html",
 	"/ms2/minigame.html",
+	"/ms2/mods.html",
 ];
 const navPage = window.location.origin + "/nav.html";
 const indexPage = pages[0];
@@ -28,6 +29,7 @@ pagesLangSupport.set(pages[1], [ languages[0], languages[1] ]);
 pagesLangSupport.set(pages[2], [ languages[0] ]);
 pagesLangSupport.set(pages[3], [ languages[0] ]);
 pagesLangSupport.set(pages[4], [ languages[0] ]);
+pagesLangSupport.set(pages[5], [ languages[0] ]);
 
 const CurrentPage = window.location.pathname !== "/" ? window.location.pathname : indexPage;
 
