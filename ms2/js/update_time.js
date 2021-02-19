@@ -1,7 +1,7 @@
 $(document).ready(() => {
-	var url = "https://drive.google.com/uc?export=download&id=1nhiBp_nKcJ5PfTIDr0CIQjoauJ4-1kRD";
+	var url = "https://www.googleapis.com/drive/v3/files/1nhiBp_nKcJ5PfTIDr0CIQjoauJ4-1kRD?key=AIzaSyAwO558mHmxVemgkdaTg157nLqJibr-Dig&alt=media";
 	
-	getJSONca(url);
+	getJSON_direct(url);
 });
 
 function updateTime(data) {
@@ -12,16 +12,25 @@ function updateTime(data) {
 	}
 }
 
-function getJSONweo(url) {
+function getJSON_direct(url) {
 	$.ajaxSetup({
 		scriptCharset: "utf-8",
 		contentType: "application/json; charset=utf-8"
 	});
 	
-	$.getJSON("http://whateverorigin.org/get?url=" + encodeURIComponent(url) + "&callback=?", updateTime);
+	$.getJSON(url, updateTime);
 }
 
-function getJSONca(url) {
+function getJSON_weo(url) {
+	$.ajaxSetup({
+		scriptCharset: "utf-8",
+		contentType: "application/json; charset=utf-8"
+	});
+	
+	$.getJSON("https://whateverorigin.org/get?url=" + encodeURIComponent(url) + "&callback=?", updateTime);
+}
+
+function getJSON_ca(url) {
 	$.ajaxPrefilter(function (options) {
 		if (options.crossDomain && jQuery.support.cors) {
 			var http = (window.location.protocol === 'http:' ? 'http:' : 'https:');
