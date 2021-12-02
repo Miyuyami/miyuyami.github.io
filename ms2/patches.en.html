@@ -1,33 +1,56 @@
 <div class="container" lang="en">
-	<div class="card mb-3">
-		<h4 class="card-header">Chinese MapleStory 2 Patches</h4>
+	<div class="card border-danger mb-3">
+		<div class="card-header">NOTICE</div>
 		<div class="card-body">
-			<p class="card-text">The English patch is based off the Global client (GMS2) and the Korean patch is from the Korean client (KMS2).</p>
-			<p class="card-text">The "No Names version" has the items and achievements/trophies names are left in chinese so that you can safely link them in chat without anyone finding you suspicious (hopefully).</p>
-			<p class="card-text">Make sure you backup your original Xml.m2h and Xml.m2d (or just Xml if you cannot see extensions)</p>
-			<p class="card-text">You'll also need to remove the patch and place the original files back to update your game.</p>
-			
-			<a id="link_gdrive_cn_en" class="card-link" target="_blank">English</a>
-			<a id="link_gdrive_cn_en_noname" class="card-link" target="_blank">English (No Names version)</a>
-			<a id="link_gdrive_cn_ko" class="card-link" target="_blank">Korean</a>
-			<a id="link_gdrive_cn_ko_noname" class="card-link" target="_blank">Korean (No Names version)</a>
-			<a id="link_gdrive_cn_ja" class="card-link" target="_blank">Japanese</a>
-			<a id="link_gdrive_cn_ja_noname" class="card-link" target="_blank">Japanese (No Names version)</a>
-		</div>
-		<div class="card-footer">
-			<small class="text-muted">Last updated <span id="t_Cn">...</span></small>
+			<p class="card-text">I lost the scripts (SSD sudden complete failure) to generate better patches, those were more complex and I sadly never backed them up somewhere.</p>
+			<p class="card-text">Check below for the current way to change the language or contact me to express your need if people still play or care about patches in MapleStory 2.</p>
 		</div>
 	</div>
 	
 	<div class="card mb-3">
 		<h4 class="card-header">Korean MapleStory 2 Patches</h4>
 		<div class="card-body">
-			<p class="card-text">Same as the Chinese patches but for Korea...</p>
-			<p class="card-text">You can use a simple "Game Starter" that I made to help with starting the game without having to go through patching (you still need to patch when a new patch is out!!!)</p>
-			<p class="card-text">This helps so that the nexon launcher won't start and replace the patched files. <a href="https://github.com/Miyuyami/NexonGameStarter/releases">You can find it on my github by clicking here.</a></p>
-			<p class="card-text">It's very easy to setup, make a shortcut of the GameStarter.exe then right click the shortcut and select Properties. Then under "Target" add at the end " 106498" (without quotes and note the space before the number).</p>
-			<p class="card-text">So if the target is <code>"C:\My Games\GameStarter.exe"</code> you must edit it to <code>"C:\My Games\GameStarter.exe" 106498</code>. All you have to do now is run it from the shortcut.</p>
-			<p class="card-text">As for how to use... open it and select the "Launch" option to start the game and skipping the file checking, if an error shows up or you know that there's been an update then choose the "Patch" option (make sure you put the backup "Xml" files so that they won't get redownloaded). Now wait until a new patch is available here (check "Last Update") then replace the files, now in the "game stater" choose launch again.</p>
+			<p class="card-text"><del>You can use a simple "Game Starter" that I made to help with starting the game without having to go through patching (you still need to patch when a new patch is out!!!)</del></p>
+			<p class="card-text"><del>This helps so that the nexon launcher won't start and replace the patched files. <a href="https://github.com/Miyuyami/NexonGameStarter/releases">You can find it on my github by clicking here.</a></del></p>
+			<p class="card-text"><del>It's very easy to setup, make a shortcut of the GameStarter.exe then right click the shortcut and select Properties. Then under "Target" add at the end " 106498" (without quotes and note the space before the number).</del></p>
+			<p class="card-text"><del>So if the target is <code>"C:\My Games\GameStarter.exe"</code> you must edit it to <code>"C:\My Games\GameStarter.exe" 106498</code>. All you have to do now is run it from the shortcut.</del></p>
+			<p class="card-text"><del>As for how to use... open it and select the "Launch" option to start the game and skipping the file checking, if an error shows up or you know that there's been an update then choose the "Patch" option (make sure you put the backup "Xml" files so that they won't get redownloaded). Now wait until a new patch is available here (check "Last Update") then replace the files, now in the "game stater" choose launch again.</del></p>
+			<p class="card-text">Go to "MapleStory2\Config\GameOption.xml" and in the line with "language" change it as the table below.</p>
+			<p class="card-text">If you get boxes instead of text, you might need to change the fonts by editing a config file at <code>"MapleStory2\Data\Resource\gfx\fontconfig.txt"</code>, you might need the NexonGameStarter from above.</p>
+			<table class="table">
+				<thead>
+					<tr>
+						<th scope="col">Language</th>
+						<th scope="col">Code</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Korean</td>
+						<td><pre><code>&lt;language languageIndex=&quot;0&quot; voiceIndex=&quot;0&quot; /&gt;</code></pre></td>
+					</tr>
+					<tr>
+						<td>Japanese</td>
+						<td><pre><code>&lt;language languageIndex=&quot;1&quot; voiceIndex=&quot;0&quot; /&gt;</code></pre></td>
+					</tr>
+					<tr>
+						<td>English</td>
+						<td><pre><code>&lt;language languageIndex=&quot;2&quot; voiceIndex=&quot;0&quot; /&gt;</code></pre></td>
+					</tr>
+					<tr>
+						<td>Chinese</td>
+						<td><pre><code>&lt;language languageIndex=&quot;3&quot; voiceIndex=&quot;0&quot; /&gt;</code></pre></td>
+					</tr>
+					<tr>
+						<td>German</td>
+						<td><pre><code>&lt;language languageIndex=&quot;5&quot; voiceIndex=&quot;0&quot; /&gt;</code></pre></td>
+					</tr>
+					<tr>
+						<td>Portuguese</td>
+						<td><pre><code>&lt;language languageIndex=&quot;6&quot; voiceIndex=&quot;0&quot; /&gt;</code></pre></td>
+					</tr>
+				</tbody>
+			</table>
 			
 			<a id="link_gdrive_kr_en" class="card-link" target="_blank">English</a>
 			<a id="link_gdrive_kr_en_noname" class="card-link" target="_blank">English (No Names version)</a>
@@ -37,17 +60,39 @@
 			<a id="link_gdrive_kr_ja_noname" class="card-link" target="_blank">Japanese (No Names version)</a>
 		</div>
 		<div class="card-footer">
-			<small class="text-muted">Last updated <span id="t_Kr">...</span></small>
+			<small>Links last updated <span id="t_Kr">...</span></small>
+		</div>
+	</div>
+
+	<div class="card mb-3">
+		<h4 class="card-header">Chinese MapleStory 2 Patches</h4>
+		<div class="card-body">
+			<p class="card-text"><del>The English patch is based off the Global client (GMS2) and the Korean patch is from the Korean client (KMS2).</del></p>
+			<p class="card-text"><del>The "No Names version" has the items and achievements/trophies names are left in chinese so that you can safely link them in chat without anyone finding you suspicious (hopefully).</del></p>
+			<p class="card-text"><del>Make sure you backup your original Xml.m2h and Xml.m2d (or just Xml if you cannot see extensions)</del></p>
+			<p class="card-text"><del>You'll also need to remove the patch and place the original files back to update your game.</del></p>
+			<p class="card-text">Outdated, no easy way to change the language unless I remake the scripts.</p>			
+			
+			<a id="link_gdrive_cn_en" class="card-link" target="_blank">English</a>
+			<a id="link_gdrive_cn_en_noname" class="card-link" target="_blank">English (No Names version)</a>
+			<a id="link_gdrive_cn_ko" class="card-link" target="_blank">Korean</a>
+			<a id="link_gdrive_cn_ko_noname" class="card-link" target="_blank">Korean (No Names version)</a>
+			<a id="link_gdrive_cn_ja" class="card-link" target="_blank">Japanese</a>
+			<a id="link_gdrive_cn_ja_noname" class="card-link" target="_blank">Japanese (No Names version)</a>
+		</div>
+		<div class="card-footer">
+			<small>Links last updated <span id="t_Cn">...</span></small>
 		</div>
 	</div>
 	
 	<div class="card mb-3">
 		<h4 class="card-header">Japanese MapleStory 2 Patches</h4>
 		<div class="card-body">
-			<p class="card-text">The English patch is based off the Global client (GMS2).</p>
-			<p class="card-text">The "No Names version" has the items and achievements/trophies names are left in japanese so that you can safely link them in chat without anyone finding you suspicious (hopefully).</p>
-			<p class="card-text">Make sure you backup your original Xml.m2h and Xml.m2d (or just Xml if you cannot see extensions)</p>
-			<p class="card-text">You'll also need to remove the patch and place the original files back to update your game.</p>
+			<p class="card-text"><del>The English patch is based off the Global client (GMS2).</del></p>
+			<p class="card-text"><del>The "No Names version" has the items and achievements/trophies names are left in japanese so that you can safely link them in chat without anyone finding you suspicious (hopefully).</del></p>
+			<p class="card-text"><del>Make sure you backup your original Xml.m2h and Xml.m2d (or just Xml if you cannot see extensions)</del></p>
+			<p class="card-text"><del>You'll also need to remove the patch and place the original files back to update your game.</del></p>
+			<p class="card-text">Very outdated, did not check the client, no one expressed any need for a patch for JMS2.</p>			
 			
 			<a id="link_gdrive_jp_en" class="card-link" target="_blank">English</a>
 			<a id="link_gdrive_jp_en_noname" class="card-link" target="_blank">English (No Names version)</a>
@@ -57,38 +102,7 @@
 			<a id="link_gdrive_jp_zh_noname" class="card-link" target="_blank">Chinese (No Names version)</a>
 		</div>
 		<div class="card-footer">
-			<small class="text-muted">Last updated <span id="t_Jp">...</span></small>
-		</div>
-	</div>
-	
-	<div class="card mb-3">
-		<h4 class="card-header">Global MapleStory 2 Patches</h4>
-		<div class="card-body">
-			<p class="card-text">Same as the other patches but for global client...</p>
-			<p class="card-text">You can change to one of the available language from options after you create a character. (ESC -> Options -> Languages -> Language box -> Scroll to the language that you want)</p>
-			<p class="card-text">If you get some error with "keyname.xml", go to "YourClientFolder\Config\GameOption.xml" and in the last few rows change "languageIndex" to "2", which is the default English.</p>
-			<p class="card-text"><del>Fonts only version adds the same languages in options but the game stays completely in english. All that changes will be the fonts used for it's respective language. This is useful for reading and writing in those respective languages while keeping the game text completely in English.</del></p>
-			<p class="card-text"><ins>It is possible to change fonts just by editing a config file in <code>"MapleStory2\Data\Resource\gfx\fontconfig.txt"</code> without needing to replace the Xml archives.</ins></p>
-			
-			<a id="link_gdrive_gb" class="card-link" target="_blank">Korean & Chinese & Japanese</a>
-			<a id="link_gdrive_gb_noname" class="card-link" target="_blank">Korean & Chinese & Japanese (No Names version)</a>
-		</div>
-		<div class="card-footer">
-			<small class="text-muted">Last updated <span id="t_Gb">...</span></small>
-		</div>
-	</div>
-	
-	<div class="card mb-3">
-		<h4 class="card-header">Global MapleStory 2 Sound Packs</h4>
-		<div class="card-body">
-			<p class="card-text">To use different voice files by just copying the sound files off another region. You do not copy all the sound files because you do NOT want to overwrite anything, you just copy the files that contain "kor" or "cn" in their file names, depending on the respective region.</p>
-			<p class="card-text">After placing the sound files near your existing global files, which should be located in "YourClientFolder\Data\Sound", you will have to change a config file, which is located in "YourClientFolder\Config\GameOption.xml", somewhere in the last few rows it says "voiceIndex="2", 2 stands for English, change it to 0, which stands for Korean. For Chinese you have to change it to 3. For Japanese you have to change it to 1.</p>
-			<p class="card-text">If you get some error with "keyname.xml", go to "YourClientFolder\Config\GameOption.xml" and in the last few rows change "voiceIndex" to "2", which means English.</p>
-			<p class="card-text">I haven't tested them much but they seem to work on the sounds that are also present on the respective versions, including emotes, but something like the GMS2 CBT emote will NOT work because it does not exist in the Korean sound files.</p>
-			
-			<a id="link_mega_sound_kr" class="card-link" target="_blank">Korean</a>
-			<a id="link_mega_sound_cn" class="card-link" target="_blank">Chinese</a>
-			<a id="link_mega_sound_jp" class="card-link" target="_blank">Japanese</a>
+			<small>Links last updated <span id="t_Jp">...</span></small>
 		</div>
 	</div>
 	
